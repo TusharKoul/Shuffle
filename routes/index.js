@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var data = require("../public/json/matches.json");
+console.log(data);
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('loginview');
@@ -27,11 +29,11 @@ router.get('/loading', function(req, res, next) {
 });
 
 router.get('/matchlist', function(req, res, next) {
-    res.render('matchlist', { title: 'matchlist' });
+    res.render('matchlist', data);
 });
 
 router.get('/settings', function(req, res, next) {
-    res.render('settings', { title: 'matchlist' });
+    res.render('settings');
 });
 
 

@@ -28,12 +28,9 @@
 
     <div class="slider">
 
-        <%- include("partials/profile.ejs",{id:1, title:"TK 1", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
-        <%- include("partials/profile.ejs",{id:2, title:"TK 2", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
-        <%- include("partials/profile.ejs",{id:3, title:"TK 3", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
-        <%- include("partials/profile.ejs",{id:4, title:"TK 4", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
-        <%- include("partials/profile.ejs",{id:5, title:"TK 5", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
-        <%- include("partials/profile.ejs",{id:6, title:"TK 6", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <% for(var i=0; i < matches.length; i++) { %>
+        <%- include("partials/profile.ejs",{id:1, title:matches[i].title, genres:matches[i].genres, imgurl: matches[i].imgurl} ) %>
+        <% } %>
 
     </div>
 

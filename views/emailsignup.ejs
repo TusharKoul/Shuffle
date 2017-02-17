@@ -75,8 +75,7 @@
 
 <body>
 
-<form action="/action_page.php">
-
+<form id="loginForm" role="form" method="get" action="/onboarding">
 
     <div class="container">
         <label><b>Username</b></label>
@@ -85,12 +84,18 @@
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="submit">Login</button>
+
+            <button type="submit">Login</button>
+
         <input type="checkbox" checked="checked"> Remember me
     </div>
 
+</form>
+
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <form id="loginForm" role="form" method="get" action="/login">
+            <button type="submit" class="cancelbtn">Cancel</button>
+        </form>
     </div>
 </form>
 

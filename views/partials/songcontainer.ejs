@@ -1,0 +1,24 @@
+<div class="message-container">
+    <div class="song-container">
+        <div class="songwaves-container">
+            <% if(playing){ %>
+            <span class="glyphicon glyphicon-pause"></span>
+            <% } else{ %>
+            <span class="glyphicon glyphicon-play"></span>
+            <% } %>
+        </div>
+        <div class="songname-container songname-container-recieved">
+            <%=  songname%>
+        </div>
+    </div>
+
+    <div class="heart-container">
+
+        <% if(liked){ %>
+        <span class="glyphicon glyphicon-heart"></span>
+        <% } else{ %>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+        <% } %>
+
+    </div>
+</div>

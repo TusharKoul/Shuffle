@@ -1,8 +1,114 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.profile-header {
+    background-color: #09335b;
+    /*background-color: #8D99AE;*/
+    /*background-color: #2B2D42;*/
+    /*margin: 5px 5px 5px 5px;*/
+    padding: 5px 5px 5px 5px;
+    overflow: auto;
+    border-radius: 10px;
 }
 
-a {
-  color: #00B7FF;
+.profile-img{
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    border-radius: 50%;
+    background-clip: padding-box;
+    margin: 5px auto 5px auto;
+    background-size: cover;
+    background-position: center center;
+    align-content: center;
+}
+
+.profile-name{
+    font-size: 24pt;
+    text-align: center;
+    margin: 5px auto 5px auto;
+    /*color: #EDF2F4;*/
+    color: #acb4ba;
+}
+
+
+.genre-tag{
+    width: 30%;
+    float: left;
+    background-color: #8D99AE;
+    color: white;
+    font-size: 12pt;
+    text-align: center;
+    margin: 10px 5px 10px 5px;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+
+
+
+.slider{
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.slick-slide{
+    outline: none;
+    opacity: .6;
+    transform: scale(0.8);
+    transition: all 300ms ease;
+}
+.slick-center{
+    display: block;
+    /*max-width: 10% !important;*/
+    /*max-height:20% !important;*/
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms ease;
+}
+
+
+
+
+
+.message-container {
+    height:100px;
+    background-color: #EDF2F4;
+    margin: 12px;
+    padding: 10px;
+    border: solid thin black;
+    border-radius: 10px;
+}
+
+.heart-container {
+    float: right;
+    width: 20%;
+}
+
+.song-container {
+    float: left;
+    height: 100%;
+    width: 70%;
+    margin-left:10px;
+}
+
+.songwaves-container {
+    height: 80%;
+}
+
+.songname-container {
+    height: 20%;
+    font-size: 8pt;
+    text-align: center;
+}
+
+.heart-container .glyphicon {
+    padding-top: 8px;
+    font-size: 4.5em;
+    color:  #d90429;
+}
+
+.songwaves-container .glyphicon {
+    padding-top: 5px;
+    font-size: 2.8em;
 }

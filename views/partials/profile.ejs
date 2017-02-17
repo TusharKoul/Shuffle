@@ -1,0 +1,12 @@
+<div class="profile-header">
+    <div class="profile-img" style="background-image: url(<%=  imgurl%>)"></div>
+    <div class="profile-name"><%=  title%></div>
+
+    <% for(var i=0; i < genres.length; i++) { %>
+        <div class="genre-tag"><%=  genres[i]%></div>
+    <% } %>
+
+    <div class="progress-button-container">
+        <a id="chatButton" href="#" class="progress-button" data-loading="Like2Chat" data-finished="Chat!">Like2Chat</a>
+    </div>
+</div>

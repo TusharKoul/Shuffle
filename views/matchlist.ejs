@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/progress-button.css"/>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>-->
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="/javascripts/progress-button.js" ></script>
+    <script type="text/javascript" src="/javascripts/matchlist.js" ></script>
+</head>
+<body>
+    <h1><%= title %></h1>
+
+    <div class="slider">
+
+        <%- include("partials/profile.ejs",{id:1, title:"TK 1", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <%- include("partials/profile.ejs",{id:2, title:"TK 2", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <%- include("partials/profile.ejs",{id:3, title:"TK 3", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <%- include("partials/profile.ejs",{id:4, title:"TK 4", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <%- include("partials/profile.ejs",{id:5, title:"TK 5", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+        <%- include("partials/profile.ejs",{id:6, title:"TK 6", genres:["Rock","EDM","Metal"], imgurl: "/images/profile-img.png"} ) %>
+
+    </div>
+
+
+    <%- include("partials/songcontainer.ejs",{msgid:1, songname:"Bob Marley - One Love", liked: 0, playing:0} ) %>
+    <%- include("partials/songcontainer.ejs",{msgid:2, songname:"Emancipator - Lionheart", liked: 0, playing:1} ) %>
+    <%- include("partials/songcontainer.ejs",{msgid:3, songname:"Luminol - Steven Wilson", liked: 0, playing:0} ) %>
+
+
+</body>
+
+</html>

@@ -26,9 +26,13 @@ router.get('/loading', function(req, res, next) {
     res.render('loadingscreen');
 });
 
-
 router.get('/matchlist', function(req, res, next) {
     res.render('matchlist', { title: 'matchlist' });
 });
+
+router.get('/settings', function(req, res, next) {
+    res.render('settings', { title: 'matchlist' });
+});
+
 
 module.exports = router;

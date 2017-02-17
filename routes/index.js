@@ -18,6 +18,10 @@ router.get('/genreselection', function(req, res, next) {
     res.render('genrescreen');
 });
 
+router.get('/loading', function(req, res, next) {
+    res.render('loadingscreen');
+});
+
 
 router.get('/matchlist', function(req, res, next) {
     res.render('matchlist', { title: 'matchlist' });

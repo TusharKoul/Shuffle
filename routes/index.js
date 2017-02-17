@@ -14,6 +14,10 @@ router.get('/emailsignup', function(req, res, next) {
     res.render('emailsignup');
 });
 
+router.get('/onboarding', function(req, res, next) {
+    res.render('onboarding');
+});
+
 router.get('/genreselection', function(req, res, next) {
     res.render('genrescreen');
 });

@@ -1,0 +1,3 @@
+<% songs.forEach(function (song) { %>
+    <%- include("songcontainer.ejs",{userid: song.usedid, songid: song.songid, songname: song.songname, liked: song.liked, playing:song.playing} ) %>
+<% }) %>

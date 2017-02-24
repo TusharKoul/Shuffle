@@ -1,0 +1,11 @@
+[
+    {"userid":1, "songid":1, "songname":"Bob Marley - One Love 1 1", "liked": 0, "playing":0},
+    {"userid":1, "songid":2, "songname":"Bob Marley - One Love 1 2", "liked": 0, "playing":0},
+    {"userid":1, "songid":3, "songname":"Bob Marley - One Love 1 3", "liked": 0, "playing":0},
+    {"userid":2, "songid":4, "songname":"Bob Marley - One Love 2 1", "liked": 0, "playing":0},
+    {"userid":2, "songid":5, "songname":"Bob Marley - One Love 2 2", "liked": 0, "playing":0},
+    {"userid":2, "songid":6, "songname":"Bob Marley - One Love 2 3", "liked": 0, "playing":0},
+    {"userid":3, "songid":7, "songname":"Bob Marley - One Love 3 1", "liked": 0, "playing":0},
+    {"userid":3, "songid":8, "songname":"Bob Marley - One Love 3 2", "liked": 0, "playing":0},
+    {"userid":3, "songid":9, "songname":"Bob Marley - One Love 3 2", "liked": 0, "playing":0}
+]

@@ -1,6 +1,9 @@
 $(document).ready(function(){
-    setupSlider();
 
+    setupSlider();
+    handleSliderEvents();
+
+    setupSongsForUser(0);
 
     $(document).on("click", ".glyphicon-heart-empty", function(event){
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
@@ -25,6 +28,14 @@ function decrementChatProgress(chatId) {
     // var chatButton = $('#chatButton'+chatId);
     var chatButton = $('#chatButton');
     chatButton.progressDecrement();
+}
+
+function setupSongsForUser(userId) {
+    var url = '/songs/' + (userId + 1).toString();
+    console.log(url);
+    $.get(url, function(result){
+        $('.songlist').html(result);
+    });
 }
 
 
@@ -52,10 +63,17 @@ function setupSlider(){
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '45px',
+                    centerPadding: '55px',
                     slidesToShow: 1
                 }
             }
         ]
+    });
+}
+
+function handleSliderEvents() {
+    // On before slide change
+    $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setupSongsForUser(nextSlide);
     });
 }

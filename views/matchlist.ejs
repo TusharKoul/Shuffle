@@ -13,8 +13,8 @@
     <script type="text/javascript" src="/javascripts/matchlist.js" ></script>
 </head>
 <body>
-<%- include("partials/apptitlebar.ejs",{goto:"/genreselection",backbutton:1} ) %>
 
+    <%- include("partials/apptitlebar.ejs",{goto:"/genreselection",backbutton:1} ) %>
 
     <div class="slider">
 
@@ -24,10 +24,9 @@
 
     </div>
 
-
-    <%- include("partials/songcontainer.ejs",{msgid:1, songname:"Bob Marley - One Love", liked: 0, playing:0} ) %>
-    <%- include("partials/songcontainer.ejs",{msgid:2, songname:"Emancipator - Lionheart", liked: 0, playing:1} ) %>
-    <%- include("partials/songcontainer.ejs",{msgid:3, songname:"Luminol - Steven Wilson", liked: 0, playing:0} ) %>
+    <div class="songlist">
+        <!--Songs will be inserted here-->
+    </div>
 
 
 </body>

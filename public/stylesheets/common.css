@@ -16,7 +16,7 @@
 }
 .home-title{
   text-align: center;
-  font-size: 32px;
+  font-size: 64px;
   margin-top: 10px;
   font-weight: bold;
   color: white;
@@ -52,10 +52,12 @@ margin-top: 20%;
   margin-left:5px;
 }
 .glyphicon-plus-sign{
-font-size:24px;
-  color: white;
-  margin-top: 10px;
-  margin-left:5px;
+font-size:144px;
+  margin-left: 270%; 
+  color: red;
+  margin-top: 90%;
+
+  
 }
 
 .glyphicon-off{

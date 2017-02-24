@@ -72,25 +72,22 @@ $(document).ready(function(){
                 }
 
                 if(progress >= 100){
-                    progress = 100;
                     finish = true;
                 }
 
-                console.log(progress);
-
                 if(finish){
 
-                    button.removeClass('in-progress').addClass('finished');
-
-                    console.log(bar);
-                    console.log(bar[0]);
+                    // button.removeClass('in-progress').addClass('finished');
+                    button.addClass('finished');
                     //bar.delay(500).fadeOut(function(){
 
                         // Trigger the custom progress-finish event
                         button.trigger('progress-finish');
                         setProgress(100);
                     // });
-
+                }
+                else {
+                    button.removeClass('finished');
                 }
 
                 setProgress(progress);

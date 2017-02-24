@@ -14,4 +14,7 @@ margin-top: 15px;
   color: #FFFFFF; 
   background-color: #E11CFF; 
   border-color: #20FAB1; 
+   position:absolute;
+bottom:48px;
+text-align: center;
 } 

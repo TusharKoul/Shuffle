@@ -1,9 +1,7 @@
 {
   "matches": [
-    {"id":1, "title":"User 1", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
-    {"id":2, "title":"User 2", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
-    {"id":3, "title":"User 3", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
-    {"id":4, "title":"User 4", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
-    {"id":5, "title":"User 5", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"}
+    {"id":1, "title":"Tushar Koul", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
+    {"id":2, "title":"Akshay Mahajan", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"},
+    {"id":3, "title":"Rj Singh", "genres":["Rock","EDM","Metal"], "imgurl": "/images/profile-img.png"}
   ]
 }

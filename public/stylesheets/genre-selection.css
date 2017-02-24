@@ -10,3 +10,8 @@ margin-top: 15px;
 .no-highlight{
 	padding: 0px 0px 0px 0px;
 }
+.next-button { 
+  color: #FFFFFF; 
+  background-color: #E11CFF; 
+  border-color: #20FAB1; 
+} 

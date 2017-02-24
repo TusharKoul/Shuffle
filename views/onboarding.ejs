@@ -4,6 +4,7 @@
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/genre-selection.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -11,7 +12,7 @@
   <style>
   
   #bigDiv{
-       margin: 80px 0px 50px 00px;
+       margin: 40px 0px 50px 00px;
   }
   select { width: 400px;
             text-align-last:center;
@@ -68,46 +69,40 @@
   margin-top: 17%;
 }
 
-#next{
+/*#next{
   margin-top: 10%;
   font-size: 18px;
   background-color: #4815c6;
-  color: #FFFFFF;
-}
+  color: #FFFFFF;}*/
+
 </style>
   
 </head>
 <body>
 
-<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:1} ) %>
-<body>
-  <div class="onoffswitch" id="switch">
+<%- include("partials/apptitlebar.ejs",{goto:"/home",backbutton:1,home:1} ) %>
+
+<!--   <div class="onoffswitch" id="switch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
     </label>
 </div>
+ -->
 
 
 
-
-<!-- <div class="container" id="bigDiv">
+<div class="container" id="bigDiv">
 <div class="container text-center">
    <form>
     <div class="form-group text-center">
       <select class="form-control" id="sel1">
         <option>I am</option>
         <option>We are</option>
-       </select> -->
+       </select>
 
-       <!-- if sel1 == I am{
-       return sel2;
-       }
-       else if sel1 == We are{
-       return sel3;
-       } -->
-
+       
       <br>
     </div>
     </form>
@@ -168,11 +163,12 @@
     </div>
     </form>
 </div>
-<div class="container text-center">
-    <form id="next" role="form" method="get" action="/genreselection">
-      <button class = "btn btn-block" id="next">Next </button>
-    </form>
+
+
+<%- include("partials/nextBtn.ejs",{goto:"/genreselection"} ) %> 
 </div>
-</div>
+
+
+
 </body>
 </html>

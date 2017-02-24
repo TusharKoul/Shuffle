@@ -1,17 +1,27 @@
-<form id="loginForm" role="form" method="get" action= <%= goto%> >
+
 <div class="app-title-bar">
 	<div class = "row">
 		<div class = "col-xs-2">  
 			<% if(backbutton){ %>
+			<form id="loginForm" role="form" method="get" action= <%= goto%> >
 			<button type = "submit">
         		    <span class="glyphicon glyphicon-chevron-left"></span>
     		</button>
+    		</form>
     		<% } %>
 
 		</div>
 		<div class = "col-xs-8">
 				<h3 class="app-title"> Shuffle </h3>
 		</div>
+		<div class = "col-xs-2">  
+			<% if(home){ %>
+			<form id="loginForm" role="form" method="get" action= "/home" >
+			<button type = "submit">
+        		    <span class="glyphicon glyphicon-home"></span>
+    		</button>
+    		</form>
+    		<% } %>
+    	</div>
 	</div>
 </div>
-</form>

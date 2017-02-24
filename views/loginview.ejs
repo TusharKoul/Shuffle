@@ -8,7 +8,7 @@
 </head>
 <style>
     /* Bordered form */
-    form {
+#loginform {
         border: 3px solid #f1f1f1;
     }
     h1{
@@ -122,7 +122,7 @@
 
 <body>
 
-<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:1} ) %>
+<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:0,home:0} ) %>
 
 
 

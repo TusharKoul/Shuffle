@@ -1,6 +1,8 @@
 
 .app-title-bar {
     background-color: #73758e;
+    padding-right: 20px;
+    
 }
 
 .app-title{
@@ -9,9 +11,56 @@
   margin-top: 10px;
   font-weight: bold;
   color: white;
+  margin-left: 20px;
+ 
 }
-
+.home-title{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+}
 .glyphicon-chevron-left{
   font-size: 24px;
   color: white;
   margin-top: 10px;
+}
+
+.glyphicon-home{
+	font-size:24px;
+	color: white;
+	margin-top: 10px;
+	margin-left:5px;
+}
+
+.next-button {
+  color: #FFFFFF ;
+  background-color: #E11CFF ;
+  border-color: #20FAB1 ;
+   position: relative;
+bottom:48px;
+text-align: center;
+margin-top: 20%;
+}
+
+.glyphicon-cog{
+  font-size:90px;
+  color: white;
+  margin-top: 10px;
+  margin-left:5px;
+}
+.glyphicon-plus-sign{
+font-size:24px;
+  color: white;
+  margin-top: 10px;
+  margin-left:5px;
+}
+
+.glyphicon-off{
+  font-size:90px;
+  color: white;
+  margin-top: 10px;
+  margin-left:40px;
+}

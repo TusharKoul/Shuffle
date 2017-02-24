@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <% include partials/head.ejs %>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
@@ -14,7 +15,7 @@
 </head>
 <body>
 
-    <%- include("partials/apptitlebar.ejs",{goto:"/genreselection",backbutton:1} ) %>
+<%- include("partials/apptitlebar.ejs",{goto:"/genreselection",backbutton:1,home:1} ) %>
 
     <div class="slider">
 

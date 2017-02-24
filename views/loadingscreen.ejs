@@ -27,14 +27,14 @@
 </style>
 <body>
 
-<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:0} ) %>
+<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:0,home:0} ) %>
 
 
 <form id="loginForm" role="form" method="get" action="/matchlist">
 <div class="container text-center">
      <h3>Sit tight! Loading your matches...</h3>
      <div class="loader"></div>
-	<!-- <button type="submit" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loaded! Click here to proceed...</button> -->
+	
 </div>
 </form>
 <script>setTimeout(function(){window.location.href='/matchlist'},3000);</script>

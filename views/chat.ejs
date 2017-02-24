@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+    <% include partials/head.ejs %>
+	<script>
+	$(document).ready(function(){
+
+	alert("Welcome to the chat room! You've matched with a good music artist - let's see if you 2 together can be great!")
+
+	});
+</script>
+</head>
+
+
+<body>
+	<%- include("partials/apptitlebar.ejs",{goto:"/matchlist",backbutton:1,home:1} ) %>
+
+</body>
+
+</html>
+

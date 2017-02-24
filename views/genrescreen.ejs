@@ -5,40 +5,52 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/stylesheets/genre-selection.css">
+  <script src="/javascripts/genre-selection.js"></script>
+</head>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
-   <link rel="stylesheet" href="/stylesheets/genre-selection.css">
-   <script src="/javascripts/genre-selection.js"></script>
-  </head>
- <body>
-  
-  <%- include("partials/apptitlebar.ejs",{goto:"/onboarding",backbutton:1} ) %>   
+<style>
+#title{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -5px;
+}
+
+.next-button{
+  margin-top: 55%;
+}
+}
+</style>
+
+<body>
+
+  <%- include("partials/apptitlebar.ejs",{goto:"/onboarding",backbutton:1,home:1} ) %>   
 
   <div class="container">
-    <span id="title"> GENRE SELECTION <span>
+    <h4 id="title"> GENRE SELECTION </h4>
     <div class="row">
       <div class="col-lg-3 col-md-4 col-xs-4 thumb" >
         <img class="img-responsive spotify no-higlight" id="soul" src="/images/soul.png" alt="">
       </div>
-      
-        <div class="col-lg-3 col-md-4 col-xs-4 thumb" >
-            <a class="genres" id="jazz" href="#">
-                <img class="img-responsive spotify " src="/images/jazz.png" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-            <a class="genres" id="rnb" href="#">
-                <img class="img-responsive spotify" src="/images/rnb.png" alt="">
-            </a>
-        </div>
+
+      <div class="col-lg-3 col-md-4 col-xs-4 thumb" >
+        <a class="genres" id="jazz" href="#">
+          <img class="img-responsive spotify " src="/images/jazz.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-4 thumb">
+        <a class="genres" id="rnb" href="#">
+          <img class="img-responsive spotify" src="/images/rnb.png" alt="">
+        </a>
+      </div>
     </div>
 
     <div class="row">
@@ -91,13 +103,12 @@
                         <img class="img-responsive spotify" src="/images/pop.png" alt="">
                     </a>
                     </div>
-            
-         <div class="container-fluid" style="padding-top: 10px;"">
-            <button class="btn-block next-button"> Next </button>
-            </div>           
+  
          
 
-        
+<%- include("partials/nextBtn.ejs",{goto:"/loading"} ) %> 
+
+
     </div>
- </body>
- </html>
+  </body>
+  </html>

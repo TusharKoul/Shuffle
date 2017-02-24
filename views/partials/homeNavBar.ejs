@@ -1,24 +1,23 @@
-
 <div class="app-title-bar">
 	<div class = "row">
 		<div class = "col-xs-2">  
-			<% if(backbutton){ %>
-			<form id="loginForm" role="form" method="get" action= <%= goto%> >
+			<% if(settings){ %>
+			<form id="loginForm" role="form" method="get" action >
 			<button type = "submit">
-        		    <span class="glyphicon glyphicon-chevron-left"></span>
+        		    <span class="glyphicon glyphicon-cog"></span>
     		</button>
     		</form>
     		<% } %>
 
 		</div>
 		<div class = "col-xs-8">
-				<h3 class="app-title"> Shuffle </h3>
+				<h1 class="app-title">Home</h1>
 		</div>
 		<div class = "col-xs-2">  
-			<% if(home){ %>
+			<% if(logoff){ %>
 			<form id="loginForm" role="form" method="get" action= "/login" >
 			<button type = "submit">
-        		    <span class="glyphicon glyphicon-home"></span>
+        		    <span class="glyphicon glyphicon-off"></span>
     		</button>
     		</form>
     		<% } %>

@@ -76,9 +76,6 @@ router.get('/songsjson/:userId', function(req, res, next) {
     res.json(usersSongs);
 });
 
-<<<<<<< HEAD
-module.exports = router;
-=======
 router.put('/togglelike', function(req, res, next) {
     var songid = req.body.songid;
     var liked = req.body.liked;
@@ -97,4 +94,3 @@ router.put('/togglelike', function(req, res, next) {
     res.json({"success":"1"});
 });
 module.exports = router;
->>>>>>> adding base code to post like data to json

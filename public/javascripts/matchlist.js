@@ -42,13 +42,13 @@ function setupSongsForUser(userId) {
 function setupLikeHandler() {
     $(document).on("click", ".glyphicon-heart-empty", function(event){
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
-        postToggleLikeOnSong($(this).attr('id'),true);
+        postToggleLikeOnSong($(this).attr('id'),1);
         incrementChatProgress(currentUserId);
     });
 
     $(document).on("click", ".glyphicon-heart", function(event){
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
-        postToggleLikeOnSong($(this).attr('id'), false);
+        postToggleLikeOnSong($(this).attr('id'), 0);
         decrementChatProgress(currentUserId);
     });
 }

@@ -84,13 +84,13 @@ router.put('/togglelike', function(req, res, next) {
     var liked = req.body.liked;
 
     var songFileName = "./public/json/songs.json";
-    console.log(songData[songid]);
-    // songData.key = "new value";
 
-    fs.writeFile(songFileName, JSON.stringify(songData), function (err) {
+    songData[songid-1].liked = liked;
+
+
+    fs.writeFile(songFileName, JSON.stringify(songData, null, 2), function (err) {
         if (err) return console.log(err);
-        console.log(JSON.stringify(songData));
-        console.log('writing to ' + songFileName);
+        console.log(songData[songid]);
     });
 
 

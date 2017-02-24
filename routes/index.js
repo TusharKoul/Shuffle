@@ -59,4 +59,18 @@ router.get('/home', function(req, res, next) {
     res.render('home');
 });
 
+router.get('/songsjson/:userId', function(req, res, next) {
+    var userId = req.params.userId;
+    var usersSongs = [];
+    for (i = 0; i< songData.length; i++) {
+        var song = songData[i];
+        if(song['userid'] == userId)
+        {
+            usersSongs.push(song);
+        }
+    }
+
+    res.json(usersSongs);
+});
+
 module.exports = router;

@@ -171,7 +171,6 @@ $(document).ready(function(){
     };
 
     $.fn.progressSet = function(val){
-        val = val || 10;
 
         var finish = false;
         if(val >= 100){

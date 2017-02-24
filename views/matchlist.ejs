@@ -20,7 +20,7 @@
     <div class="slider">
 
         <% for(var i=0; i < matches.length; i++) { %>
-        <%- include("partials/profile.ejs",{id:1, title:matches[i].title, genres:matches[i].genres, imgurl: matches[i].imgurl} ) %>
+        <%- include("partials/profile.ejs",{id:matches[i].id, title:matches[i].title, genres:matches[i].genres, imgurl: matches[i].imgurl} ) %>
         <% } %>
 
     </div>

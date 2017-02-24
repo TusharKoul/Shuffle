@@ -55,4 +55,8 @@ router.get('/chat', function(req, res, next) {
     res.render('chat');
 });
 
+router.get('/home', function(req, res, next) {
+    res.render('home');
+});
+
 module.exports = router;

@@ -4,20 +4,45 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
     <% include partials/head.ejs %>
+    <style>
+    img{
+    	border: dotted;
+    	border-style: bold;
+
+    }
+    h1{
+    	text-align: center;
+    }
+     h2{
+    	text-align: center;
+    }
+     h3{
+    	text-align: center;
+    }
+     p{
+    	text-align: center;
+    }
+    </style>
 	<script>
 	$(document).ready(function(){
 
-	alert("Welcome to the chat room! You've matched with a good music artist - let's see if you 2 together can be great!")
+	alert("Hey! This page is under maintenance. Hit the home button to be redirected back home")
 
 	});
 </script>
 </head>
 
-
 <body>
 	<%- include("partials/apptitlebar.ejs",{goto:"/matchlist",backbutton:1,home:1} ) %>
 
+<img class ="img-responsive" src = "/images/tushar.jpg"></img>
+
+<h1>HEY!</h1>
+<h3>undergoing maintainence</h3>	
+<h3> Error number: 858-729-3916</h3>
+<p> Koul the number above for tech (and emotional) support </h3>
 </body>
 
 </html>
+
 

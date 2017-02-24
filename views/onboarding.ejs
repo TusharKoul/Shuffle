@@ -2,7 +2,9 @@
 
 <html>
 <head>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,63 +17,131 @@
             text-align-last:center;
   }
 
-  </style>
+.onoffswitch {
+    position: relative; width: 177px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #030000; border-radius: 14px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 58px; padding: 0; line-height: 58px;
+    font-size: 29px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "  I am";
+    padding-left: 24px;
+    background-color: #EEEEEE; color: #000000;
+}
+.onoffswitch-inner:after {
+    content: "We are";
+    padding-right: 24px;
+    background-color: #EEEEEE; color: #000000;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 11px; margin: 23.5px;
+    background: #ED0067;
+    position: absolute; top: 0; bottom: 0;
+    right: 115px;
+    border: 2px solid #030000; border-radius: 14px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+#switch{
+  margin-left: 25%;
+  margin-top: 17%;
+}
+
+#next{
+  margin-top: 10%;
+  font-size: 18px;
+  background-color: #4815c6;
+  color: #FFFFFF;
+}
+</style>
   
 </head>
 <body>
-<form id="loginForm" role="form" method="get" action="/login">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header text-center" >
-            <button type="submit" class="btn btn-default navbar-btn pull-left navbar-toggle">
-            </button>
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </button>
-      <div class="navbar-text navbar-brand-centered"><h3>Shuffle</h3></div>
-    </div>
-  </div>
-</nav>
-</form>
 
-<div class="container" id="bigDiv">
+<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:1} ) %>
+<body>
+  <div class="onoffswitch" id="switch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+
+
+
+
+<!-- <div class="container" id="bigDiv">
 <div class="container text-center">
    <form>
     <div class="form-group text-center">
       <select class="form-control" id="sel1">
         <option>I am</option>
         <option>We are</option>
-       </select>
+       </select> -->
+
+       <!-- if sel1 == I am{
+       return sel2;
+       }
+       else if sel1 == We are{
+       return sel3;
+       } -->
+
       <br>
     </div>
     </form>
   </div>
 
 <div class="container text-center">
-    <h1> a </h1>
+    <h2> a </h2>
 
     </div>
 
 <div class="container text-center">
   <form>
     <div class="form-group text-center">
-      <select class="form-control" id="sel1">
-         <option selected="true" disabled="disabled">Click here if you selected "we are" above</option> 
-        <option>Band</option>
+      <select class="form-control" id="sel2">
+         <option selected="true" disabled="disabled">Click here if you selected "we are" above</option><option>Band</option>
          <option>Orchestra</option>
-        <option>Acapella group</option>    
+         <option>Acapella group</option> 
+         <option>Choir</option>
+         <option>DJs</option>
+
         </select>
       <br>
     </div>
     </form>
      <form>
     <div class="form-group text-center">
-      <select class="form-control" id="sel1">
+      <select class="form-control" id="sel3">
          <option selected="true" disabled="disabled">Click here if you selected "i am" above</option> 
         <option>Guitarist</option>
          <option>Drummer</option>
         <option>Bassist</option>
         <option>Vocalist</option>
         <option>DJ</option>
+        <option>Pianist/Keyboard Player</option>
         <option>Other</option>    
         </select>
       <br>
@@ -80,9 +150,10 @@
 </div>
 
 <div class="container text-center">
-    <h1> looking for a </h1>
+    <h2> looking for a </h2>
 
     </div>
+    <br>
 
 <div class="container text-center">
    <select class="form-control" id="sel1">
@@ -98,8 +169,8 @@
     </form>
 </div>
 <div class="container text-center">
-    <form id="loginForm" role="form" method="get" action="/genreselection">
-        <input type="submit" class="btn" value="Next">
+    <form id="next" role="form" method="get" action="/genreselection">
+      <button class = "btn btn-block" id="next">Next </button>
     </form>
 </div>
 </div>

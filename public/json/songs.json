@@ -3,28 +3,28 @@
     "userid": 1,
     "songid": 1,
     "songname": "Bob Marley - One Love",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {
     "userid": 1,
     "songid": 2,
     "songname": "Akon - Smackthat",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {
     "userid": 1,
     "songid": 3,
     "songname": "Akon - 50 cent",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {
     "userid": 2,
     "songid": 4,
     "songname": "Steven Wilson - Luminol",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {
@@ -45,14 +45,14 @@
     "userid": 3,
     "songid": 7,
     "songname": "Grouplove - Alien",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {
     "userid": 3,
     "songid": 8,
     "songname": "Radiohead - True love waits",
-    "liked": "1",
+    "liked": 0,
     "playing": 0
   },
   {

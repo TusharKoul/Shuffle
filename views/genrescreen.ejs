@@ -22,7 +22,107 @@
   
   <%- include("partials/apptitlebar.ejs",{goto:"/onboarding",backbutton:1} ) %>   
 
+<<<<<<< HEAD
   <div class="container">
+=======
+/*  For responsive images */
+
+.content .rs{
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
+/*  For responsive images as background */
+
+.bg{
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    color:#fff;
+}
+
+body {
+    font-size:12px;
+    /*font-family: 'Lato',verdana, sans-serif;*/
+    color: #fff;
+    text-align:center;
+    background:#ECECEC;
+}
+p{
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+
+
+#bottom {
+    clear:both;
+    margin:0 1.66%;
+    width:89.68%;
+    padding: 3.5%;
+    background-color:#1E1E1E;
+    color: #fff;
+}
+#bottom p{
+    text-align:center;
+    line-height:2em;
+}
+#bottom a{
+    color: #000;
+    text-decoration:none;
+    border:1px solid #000;
+    padding:10px 20px 12px;
+    line-height:70px;
+    background:#ccc;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#bigDiv{
+       margin: 10px 0px 10px 00px;
+  }
+  .input-group{
+      padding-top: 15px;
+  }
+  .selectedGenre{
+        background-color:#fff;
+        border: 1px dashed #000;
+        
+  }
+  .next-button{
+      background-color: seagreen;
+      color:white;
+      width:70%;
+      border-radius: 10%;
+      text-align: center;
+  }
+  #title{
+      color:black;
+      margin: 0px 0px 0px 0px;
+
+  }
+  #topDiv{
+      padding: 0px 0px 0px 0px;
+  }
+  #next{
+  
+  font-size: 18px;
+  background-color: #4815c6;
+  color: #FFFFFF;
+}
+</style>
+</head> 
+<body> 
+
+    <!---Navbar baby-->
+
+<%- include("partials/apptitlebar.ejs",{goto:"/onboarding",backbutton:1} ) %>   
+
+<div id="topDiv">
+
+>>>>>>> updated next button and I am/we are toggle
     <span id="title"> GENRE SELECTION <span>
     <div class="row">
       <div class="col-lg-3 col-md-4 col-xs-4 thumb" >
@@ -97,5 +197,19 @@
 
         
     </div>
+<<<<<<< HEAD
  </body>
  </html>
+=======
+</div>
+
+</div>
+   <div class="container text-center">
+    <form id="next" role="form" method="get" action="/loading">
+      <button class = "btn btn-block" id="next">Next </button>
+    </form>
+</div>
+  
+</body> 
+</html>
+>>>>>>> updated next button and I am/we are toggle

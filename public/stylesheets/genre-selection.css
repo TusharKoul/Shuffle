@@ -1,0 +1,12 @@
+.spotify {
+width:105px;
+height:105px;
+margin-top: 15px;
+}
+.highlight{
+    padding: 7px 7px 7px 7px;
+    background: #FF8077;
+}
+.no-highlight{
+	padding: 0px 0px 0px 0px;
+}

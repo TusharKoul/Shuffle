@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head><link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <style>
     /* user login*/
 
     /* Bordered form */
-    form {
+.someform {
         border: 3px solid #f1f1f1;
     }
 
@@ -21,7 +27,7 @@
     }
 
     /* Set a style for all buttons */
-    button {
+.Login-button {
         background-color: #4CAF50;
         color: white;
         padding: 14px 20px;
@@ -30,52 +36,24 @@
         cursor: pointer;
         width: 100%;
     }
-
-    /* Extra style for the cancel button (red) */
-    .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
+.Cancel-button {
+        background-color: #e5103a;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
     }
 
-    /* Center the avatar image inside this container */
-    .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-    }
 
-    /* Avatar image */
-    img.avatar {
-        width: 40%;
-        border-radius: 50%;
-    }
-
-    /* Add padding to containers */
-    .container {
-        padding: 16px;
-    }
-
-    /* The "Forgot password" text */
-    span.psw {
-        float: right;
-        padding-top: 16px;
-    }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        span.psw {
-            display: block;
-            float: none;
-        }
-        .cancelbtn {
-            width: 100%;
-        }
-    }
 </style>
 
 <body>
+    <%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:1} ) %>
 
-<form id="loginForm" role="form" method="get" action="/onboarding">
+<form class= "someform" id="loginForm" role="form" method="get" action="/onboarding">
+    
 
     <div class="container">
         <label><b>Username</b></label>
@@ -85,7 +63,7 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
 
 
-            <button type="submit">Login</button>
+            <button type="submit" class= "Login-button">Login</button>
 
         <input type="checkbox" checked="checked"> Remember me
     </div>
@@ -94,7 +72,7 @@
 
     <div class="container" style="background-color:#f1f1f1">
         <form id="loginForm" role="form" method="get" action="/login">
-            <button type="submit" class="cancelbtn">Cancel</button>
+            <button type="submit" class="Cancel-button">Cancel</button>
         </form>
     </div>
 </form>

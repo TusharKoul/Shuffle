@@ -2,6 +2,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
     /* Bordered form */
@@ -99,12 +105,6 @@
         font-size: 35px;
     }
 
-    /* Extra style for the cancel button (red) */
-    .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-    }
 
     /* Center the avatar image inside this container */
     .imgcontainer {
@@ -123,22 +123,7 @@
         padding: 16px;
     }
 
-    /* The "Forgot password" text */
-    span.psw {
-        float: right;
-        padding-top: 16px;
-    }
 
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        span.psw {
-            display: block;
-            float: none;
-        }
-        .cancelbtn {
-            width: 100%;
-        }
-    }
 
 
 </style>
@@ -147,12 +132,7 @@
 
 <body>
 
-<h1 class = "text-align"> Shuffle</h1>
-
-<div class="imgcontainer">
-    <img src="http://previews.123rf.com/images/sababa66/sababa661203/sababa66120300014/12862121-Abstract-music-background-for-music-event-design-vector-illustration--Stock-Vector.jpg" alt="Avatar" class="avatar">
-</div>
-
+<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:0} ) %>
 
 
 

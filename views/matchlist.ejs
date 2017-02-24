@@ -3,6 +3,7 @@
 <head>
     <% include partials/head.ejs %>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/progress-button.css"/>
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
@@ -12,19 +13,8 @@
     <script type="text/javascript" src="/javascripts/matchlist.js" ></script>
 </head>
 <body>
-<form id="loginForm" role="form" method="get" action="/genreselection">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header text-center" >
-                <button type="submit" class="btn btn-default navbar-btn pull-left navbar-toggle">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </button>
-                <div class="navbar-text navbar-brand-centered"><h3>Shuffle</h3></div>
-            </div>
+<%- include("partials/apptitlebar.ejs",{goto:"/genreselection",backbutton:1} ) %>
 
-        </div>
-    </nav>
-</form>
 
     <div class="slider">
 

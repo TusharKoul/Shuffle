@@ -1,0 +1,17 @@
+
+.app-title-bar {
+    background-color: #73758e;
+}
+
+.app-title{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.glyphicon-chevron-left{
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;

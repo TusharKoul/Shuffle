@@ -29,11 +29,11 @@ function setupSongsForUser(userId) {
         var likedCount = 0;
         for(i = 0; i< songlist.length; i++) {
             htmlStr += getSongContainerHtml(songlist[i]);
-            $('.songlist').html(htmlStr);
             if (songlist[i].liked) {
                 likedCount += 1;
             }
         }
+        $('.songlist').html(htmlStr);
         var chatButton = $('#chatButton'+userId);
         chatButton.progressSet(likedCount*34);
     });
@@ -42,12 +42,25 @@ function setupSongsForUser(userId) {
 function setupLikeHandler() {
     $(document).on("click", ".glyphicon-heart-empty", function(event){
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
+        postToggleLikeOnSong($(this).attr('id'),true);
         incrementChatProgress(currentUserId);
     });
 
     $(document).on("click", ".glyphicon-heart", function(event){
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
+        postToggleLikeOnSong($(this).attr('id'), false);
         decrementChatProgress(currentUserId);
+    });
+}
+
+function postToggleLikeOnSong(songid,liked) {
+    $.ajax({
+        url: '/togglelike',
+        type: 'PUT',
+        data: {songid: songid, liked : liked},
+        success:function(data){
+            console.log('put success' + data);
+        }
     });
 }
 
@@ -102,10 +115,10 @@ function getSongContainerHtml(songJson) {
     str += '<div class="song-container">';
     str += '<div class="songwaves-container">';
     if(playing) {
-        str += '<span class="glyphicon glyphicon-pause"></span>';
+        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-pause"></span>';
     }
     else {
-        str += '<span class="glyphicon glyphicon-play"></span>';
+        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-play"></span>';
     }
     str += '</div>';
 
@@ -116,10 +129,10 @@ function getSongContainerHtml(songJson) {
 
     str += '<div class="heart-container">';
     if(liked) {
-        str += '<span class="glyphicon glyphicon-heart"></span>';
+        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-heart"></span>';
     }
     else {
-        str += '<span class="glyphicon glyphicon-heart-empty"></span>';
+        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-heart-empty"></span>';
     }
 
     str += '</div>';

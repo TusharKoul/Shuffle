@@ -2,7 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 var matchData = require("../public/json/matches.json");
-var songData = require("../public/json/songs.json");
+var songFileName = "../public/json/songs.json";
+var songData = require(songFileName);
+
+var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -73,4 +76,25 @@ router.get('/songsjson/:userId', function(req, res, next) {
     res.json(usersSongs);
 });
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+router.put('/togglelike', function(req, res, next) {
+    var songid = req.body.songid;
+    var liked = req.body.liked;
+
+    var songFileName = "./public/json/songs.json";
+    console.log(songData[songid]);
+    // songData.key = "new value";
+
+    fs.writeFile(songFileName, JSON.stringify(songData), function (err) {
+        if (err) return console.log(err);
+        console.log(JSON.stringify(songData));
+        console.log('writing to ' + songFileName);
+    });
+
+
+    res.json({"success":"1"});
+});
+module.exports = router;
+>>>>>>> adding base code to post like data to json

@@ -2,13 +2,19 @@
     <div class="song-container">
         <div class="songwaves-container">
 
-            <% if(playing){ %>
-            <div class="glyphicon glyphicon-pause"> </div>
-            <% } else{ %>
             <div class="glyphicon glyphicon-play"></div>
-            <% } %>
-
-            <div id=<%= "song-waveform" + songid %> class="song-waveform"> </div>
+            <div id=<%= "song-waveform" + songid %> class="song-waveform">
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                    <div class="rect6"></div>
+                    <div class="rect7"></div>
+                    <div class="rect8"></div>
+                </div>
+            </div>
 
         </div>
 

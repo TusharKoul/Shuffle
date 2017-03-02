@@ -134,19 +134,13 @@ function handleSliderEvents() {
 
 
 function getSongContainerHtml(songJson) {
-    var playing = songJson.playing;
     var liked = songJson.liked;
     var songname = songJson.songname;
     var str = '<div class="message-container">';
     str += '<div class="song-container">';
     str += '<div class="songwaves-container">';
-    if(playing) {
-        str += '<div id="song-playpause'+ songJson.songid +'"' + ' class="glyphicon glyphicon-pause"></div>';
-    }
-    else {
-        str += '<div id="song-playpause'+ songJson.songid +'"' + ' class="glyphicon glyphicon-play"></div>';
-    }
 
+    str += '<div id="song-playpause'+ songJson.songid +'"' + ' class="glyphicon glyphicon-play"></div>';
     str += '<div id="song-waveform'+ songJson.songid +'"' + ' class="song-waveform"></div>';
 
     str += '</div>';
@@ -168,6 +162,15 @@ function getSongContainerHtml(songJson) {
     str += '</div>';
 
     return str;
+}
+
+function getLoadingHtml() {
+    var str = '<div class="spinner">';
+    for(var i=0; i<8; i++) {
+        str += '<div class="rect' + i + '"></div>';
+    }
+    str += '</div>';
+    return str
 }
 
 

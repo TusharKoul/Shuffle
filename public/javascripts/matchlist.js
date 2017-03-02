@@ -1,4 +1,5 @@
 var currentUserId = 1;
+var currentSongwaveDict = {};
 $(document).ready(function(){
 
     setupSlider();
@@ -6,6 +7,7 @@ $(document).ready(function(){
 
     setupSongsForUser(currentUserId);
     setupLikeHandler();
+    setupPlayPauseHandler();
 });
 
 function incrementChatProgress(userId) {
@@ -66,6 +68,25 @@ function postToggleLikeOnSong(songid,liked) {
             console.log('put success' + data);
         }
     });
+}
+
+function setupPlayPauseHandler() {
+    $(document).on("click", ".glyphicon-pause", function(event){
+        $(this).toggleClass("glyphicon-pause glyphicon-play");
+        var songid = $(this).attr('id').replace('song-playpause','');
+        togglePlayPause(songid);
+    });
+
+    $(document).on("click", ".glyphicon-play", function(event){
+        $(this).toggleClass("glyphicon-pause glyphicon-play");
+        var songid = $(this).attr('id').replace('song-playpause','');
+        togglePlayPause(songid);
+    });
+}
+
+function togglePlayPause(songid) {
+    var songwave = currentSongwaveDict[songid];
+    songwave.playPause();
 }
 
 
@@ -165,11 +186,13 @@ function setupSongwaves(songJson) {
 
     wavesurfer.on('ready', function () {
         console.log('ready');
-        wavesurfer.play();
+        // wavesurfer.play();
+        currentSongwaveDict[songJson.songid] = wavesurfer;
     });
 
     $(document).on("destroy-songwaves", function () {
-        wavesurfer.destroy()
+        wavesurfer.destroy();
+        delete currentSongwaveDict[songJson.songid];
     });
 
     // Hard coding song for now

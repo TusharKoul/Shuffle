@@ -1,6 +1,3 @@
-*:focus {
-    outline: none;
-}
 
 .progress-button{
     outline: none;
@@ -20,6 +17,10 @@
     background-image:-webkit-linear-gradient(top, #51b7e6, #4dafdd);
     background-image:-moz-linear-gradient(top, #51b7e6, #4dafdd);
     background-image:linear-gradient(top, #51b7e6, #4dafdd);
+}
+
+.progress-button:focus {
+    outline:5px auto darkcyan;
 }
 
 /*	Hide the original text of the button. Then the loading or finished

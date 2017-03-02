@@ -1,15 +1,21 @@
 <div class="message-container">
     <div class="song-container">
         <div class="songwaves-container">
+
             <% if(playing){ %>
-            <span class="glyphicon glyphicon-pause"></span>
+            <div class="glyphicon glyphicon-pause"> </div>
             <% } else{ %>
-            <span class="glyphicon glyphicon-play"></span>
+            <div class="glyphicon glyphicon-play"></div>
             <% } %>
+
+            <div id=<%= "song-waveform" + songid %> class="song-waveform"> </div>
+
         </div>
+
         <div class="songname-container songname-container-recieved">
             <%=  songname%>
         </div>
+
     </div>
 
     <div class="heart-container">

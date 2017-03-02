@@ -19,21 +19,25 @@ function decrementChatProgress(userId) {
 }
 
 function setupSongsForUser(userId) {
-    // var url = '/songs/' + userId;
-    // $.get(url, function(result){
-    //     $('.songlist').html(result);
-    // });
     var url = '/songsjson/' + userId;
+    $('.songlist').html('<p>LOADING ...</p>');
     $.get(url, function(songlist){
+        $('.songlist').html('');
+        // Adding individual songs containers
         var htmlStr = '';
         var likedCount = 0;
         for(i = 0; i< songlist.length; i++) {
-            htmlStr += getSongContainerHtml(songlist[i]);
+            htmlStr = getSongContainerHtml(songlist[i]);
+            $('.songlist').append(htmlStr);
+
+            setupSongwaves(songlist[i]);
+
             if (songlist[i].liked) {
                 likedCount += 1;
             }
         }
-        $('.songlist').html(htmlStr);
+
+        // Based on 'likes' setup chat button loading ratio
         var chatButton = $('#chatButton'+userId);
         chatButton.progressSet(likedCount*34);
     });
@@ -100,6 +104,7 @@ function setupSlider(){
 function handleSliderEvents() {
     // On before slide change
     $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        destroyCurrentSongwaves();
         currentUserId = nextSlide + 1;
         setupSongsForUser(currentUserId);
     });
@@ -115,14 +120,17 @@ function getSongContainerHtml(songJson) {
     str += '<div class="song-container">';
     str += '<div class="songwaves-container">';
     if(playing) {
-        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-pause"></span>';
+        str += '<div id="song-playpause'+ songJson.songid +'"' + ' class="glyphicon glyphicon-pause"></div>';
     }
     else {
-        str += '<span id="'+ songJson.songid +'"' + ' class="glyphicon glyphicon-play"></span>';
+        str += '<div id="song-playpause'+ songJson.songid +'"' + ' class="glyphicon glyphicon-play"></div>';
     }
+
+    str += '<div id="song-waveform'+ songJson.songid +'"' + ' class="song-waveform"></div>';
+
     str += '</div>';
 
-    str += '<div class="songname-container songname-container-recieved">';
+    str += '<div class="songname-container">';
     str += songname;
     str += '</div>';
     str += '</div>';
@@ -139,4 +147,37 @@ function getSongContainerHtml(songJson) {
     str += '</div>';
 
     return str;
+}
+
+
+function setupSongwaves(songJson) {
+    var songwaveid = '#song-waveform' + songJson.songid;
+
+    var wavesurfer = WaveSurfer.create({
+        container: songwaveid,
+        height : 80,
+        barWidth : 4,
+        cursorWidth : 2,
+        waveColor: '#938d2a',
+        cursorColor: 'white',
+        progressColor: 'red'
+    });
+
+    wavesurfer.on('ready', function () {
+        console.log('ready');
+        wavesurfer.play();
+    });
+
+    $(document).on("destroy-songwaves", function () {
+        wavesurfer.destroy()
+    });
+
+    // Hard coding song for now
+    wavesurfer.load('../assets/song1.mp3');
+}
+
+function destroyCurrentSongwaves() {
+    $.event.trigger({
+        type: "destroy-songwaves"
+    });
 }

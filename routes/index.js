@@ -28,6 +28,14 @@ router.get('/genreselection', function(req, res, next) {
     res.render('selectgenres');
 });
 
+router.get('/genreselection_A', function(req, res, next) {
+    res.render('selectgenres');
+});
+
+router.get('/genreselection_B', function(req, res, next) {
+    res.render('selectgenresB');
+});
+
 router.get('/loading', function(req, res, next) {
     res.render('loadingscreen');
 });

@@ -4,19 +4,23 @@
     
     <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+
 </head>
 <style>
     /* Bordered form */
-#loginform {
+/*#loginform {
         border: 3px solid #f1f1f1;
-    }
-    h1{
+    }*/
+    .h1-style{
         text-align: center;
         margin-top: 10%;
-        font-size: 70px;
-        font-family: "comic sans";
-        margin-bottom: 10%;
+        font-size: 90px;
+        font-family: "";
+        margin-bottom: 12%;
+        margin-left-right: 15%;
+        margin-right-left: 15%;
+        
     }
     h2{
         text-align: center;
@@ -25,24 +29,15 @@
         font-size: 35px;
         font-family: "comic sans";
     }
-    /* Full-width inputs */
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
+   
     /* Set a style for all buttons */
     .btn-facebook {
         background-color: #154EA8;
         color: white;
         padding: 34px 40px;
-        margin: 8px 0;
+        margin-bottom: 5%;
         margin-left: 15%;
-        margin-top: 20%;
+        margin-top: 10%;
         border: none;
         cursor: pointer;
         width: 70%;
@@ -52,7 +47,7 @@
         background-color: #4ab55f;
         color: white;
         padding: 34px 40px;
-        margin: 8px 0;
+        margin-bottom: 5%;
         margin-left: 15%;
         margin-top: 5%;
         border: none;
@@ -64,7 +59,7 @@
         background-color: #FF5500;
         color: white;
         padding: 34px 40px;
-        margin: 8px 0;
+        margin-bottom: 5%;
         margin-left: 15%;
         margin-top: 5%;
         border: none;
@@ -74,25 +69,12 @@
         font-size: 35px;
     }
 
-    .btn-soundcloud{
-        background-color: #FF5500;
-        color: white;
-        padding: 34px 40px;
-        margin: 8px 0;
-        margin-left: 15%;
-        margin-top: 5%;
-        border: none;
-        cursor: pointer;
-        width: 70%;
-        margin-bottom: 5%;
-        font-size: 35px;
-    }
 
     .btn-email{
         background-color: #020107;
         color: white;
         padding: 34px 40px;
-        margin: 8px 0;
+        margin-bottom: 5%;
         margin-left: 15%;
         margin-top: 5%;
         border: none;
@@ -101,17 +83,28 @@
         margin-bottom: 5%;
         font-size: 35px;
     }
+    .marginfix{
 
-
-
-
-    /* Add padding to containers */
-    .container {
-        padding: 16px;
     }
-    .apptitle{
-        margin-bottom: 20px;
+    .app-title-bar {
+        background-color: #73758e;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+
     }
+
+    .app-title{
+      text-align: center;
+      font-size: 84px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: white;
+      margin-left: 20px;
+
+
+     
+}
 
 
 
@@ -122,8 +115,17 @@
 
 <body>
 
-<%- include("partials/apptitlebar.ejs",{goto:"/login",backbutton:0,home:0} ) %>
+<div class="app-title-bar">
+    <h3 class="app-title"> Shuffle </h3>
 
+</div>
+        
+
+
+
+<div class = "marginfix">
+<h1 class = "h1-style bg-warning">Login</h1>
+</div>
 
 
 <form id="loginForm" role="form" method="get" action="/onboarding">
@@ -132,7 +134,7 @@
     <button type ="submit" class = "btn-soundcloud"> Login with Sound Cloud</button>
 </form>
 
-<h2> OR </h2>
+<!-- <h2> OR </h2> -->
 
 <form id="loginForm" role="form" method="get" action="/emailsignup">
 <button type="submit" class = "btn-email"> Login with Email </button>

@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/javascripts/onboarding.js" ></script>
+
+
   <style>
   
   #bigDiv{
@@ -18,63 +21,6 @@
             text-align-last:center;
   }
 
-.onoffswitch {
-    position: relative; width: 177px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-.onoffswitch-checkbox {
-    display: none;
-}
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #030000; border-radius: 14px;
-}
-.onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 58px; padding: 0; line-height: 58px;
-    font-size: 29px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-    content: "  I am";
-    padding-left: 24px;
-    background-color: #EEEEEE; color: #000000;
-}
-.onoffswitch-inner:after {
-    content: "We are";
-    padding-right: 24px;
-    background-color: #EEEEEE; color: #000000;
-    text-align: right;
-}
-.onoffswitch-switch {
-    display: block; width: 11px; margin: 23.5px;
-    background: #ED0067;
-    position: absolute; top: 0; bottom: 0;
-    right: 115px;
-    border: 2px solid #030000; border-radius: 14px;
-    transition: all 0.3s ease-in 0s; 
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
-}
-
-#switch{
-  margin-left: 25%;
-  margin-top: 17%;
-}
-
-/*#next{
-  margin-top: 10%;
-  font-size: 18px;
-  background-color: #4815c6;
-  color: #FFFFFF;}*/
-
 </style>
   
 </head>
@@ -82,14 +28,7 @@
 
 <%- include("partials/apptitlebar.ejs",{goto:"/home",backbutton:1,home:1} ) %>
 
-<!--   <div class="onoffswitch" id="switch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-    <label class="onoffswitch-label" for="myonoffswitch">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-</div>
- -->
+  
 
 
 
@@ -100,10 +39,10 @@
       <select class="form-control" id="sel1">
         <option>I am</option>
         <option>We are</option>
-       </select>
+       </select> 
 
        
-      <br>
+      <br> 
     </div>
     </form>
   </div>
@@ -117,7 +56,6 @@
   <form>
     <div class="form-group text-center">
       <select class="form-control" id="sel2">
-         <option selected="true" disabled="disabled">Click here if you selected "we are" above</option><option>Band</option>
          <option>Orchestra</option>
          <option>Acapella group</option> 
          <option>Choir</option>
@@ -130,7 +68,6 @@
      <form>
     <div class="form-group text-center">
       <select class="form-control" id="sel3">
-         <option selected="true" disabled="disabled">Click here if you selected "i am" above</option> 
         <option>Guitarist</option>
          <option>Drummer</option>
         <option>Bassist</option>
@@ -167,6 +104,7 @@
 
 <%- include("partials/nextBtn.ejs",{goto:"/genreselection"} ) %> 
 </div>
+
 
 
 

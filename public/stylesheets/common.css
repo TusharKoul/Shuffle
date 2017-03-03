@@ -16,11 +16,12 @@
 }
 .home-title{
   text-align: center;
-  font-size: 64px;
-  margin-top: 10px;
+  font-size: 84px;
+  margin-top: 20px;
   font-weight: bold;
   color: white;
   margin-left: 20px;
+  padding-bottom: 20px;
 }
 .glyphicon-chevron-left{
   font-size: 24px;
@@ -48,7 +49,7 @@ margin-top: 20%;
 .glyphicon-cog{
   font-size:90px;
   color: white;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left:5px;
 }
 .glyphicon-plus-sign{
@@ -63,6 +64,6 @@ font-size:144px;
 .glyphicon-off{
   font-size:90px;
   color: white;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left:40px;
 }

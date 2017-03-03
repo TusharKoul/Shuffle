@@ -90,7 +90,7 @@ router.put('/togglelike', function(req, res, next) {
 
     var songFileName = "./public/json/songs.json";
 
-    songData[songid-1].liked = liked;
+    songData[songid-1].liked = parseInt(liked);
 
 
     fs.writeFile(songFileName, JSON.stringify(songData, null, 2), function (err) {

@@ -1,7 +1,12 @@
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #131e29;
+}
+
 .profile-header {
-    background-color: #09335b;
-    /*background-color: #8D99AE;*/
-    /*background-color: #2B2D42;*/
+    /*background-color: #09335b;*/
+    /*background-color: #4a80b9;*/
+    background-color: #294764;
     /*margin: 5px 5px 5px 5px;*/
     padding: 5px 5px 5px 5px;
     overflow: auto;
@@ -23,24 +28,26 @@
 }
 
 .profile-name{
-    font-size: 24pt;
+    font-size: 22pt;
     text-align: center;
     margin: 5px auto 5px auto;
-    /*color: #EDF2F4;*/
-    color: #acb4ba;
+    color: white;
 }
 
 
 .genre-tag{
     width: 28%;
     float: left;
-    background-color: #8D99AE;
+    /*background-color: #8D99AE;*/
+    background-color: #333745;
     color: white;
     font-size: 12pt;
+    font-weight: lighter;
     text-align: center;
     margin: 10px 5px 10px 5px;
+    padding-top: 2px;
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 
@@ -73,7 +80,11 @@
 
 .message-container {
     height:110px;
-    background-color: #EDF2F4;
+    background-color: white;
+    /*background-color: #4a80b9;*/
+    /*background-color: #333745;*/
+    /*background-color: #d0d0d0;*/
+
     margin: 8px;
     padding: 5px;
     border: solid thin black;
@@ -104,7 +115,7 @@
 .heart-container .glyphicon {
     margin-top: 14px;
     font-size: 4.5em;
-    color:  #d90429;
+    color: #dd3346;
 }
 
 .songwaves-container .glyphicon {

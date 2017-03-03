@@ -2,7 +2,7 @@
 .progress-button{
     outline: none;
     display: inline-block;
-    font-size:15px;
+    font-size:13px;
     color:#fff !important;
     text-decoration: none !important;
     padding:10px 90px;
@@ -12,11 +12,13 @@
 
     /*box-shadow:0 1px 1px #ccc;*/
     border-radius:5px;
+    border-color: white;
+    border-style: solid;
 
-    background-color: #51b7e6;
-    background-image:-webkit-linear-gradient(top, #51b7e6, #4dafdd);
-    background-image:-moz-linear-gradient(top, #51b7e6, #4dafdd);
-    background-image:linear-gradient(top, #51b7e6, #4dafdd);
+    background-color: #64a7f4;
+    background-image:-webkit-linear-gradient(top, #64a7f4, #4dafdd);
+    background-image:-moz-linear-gradient(top, #64a7f4, #4dafdd);
+    background-image:linear-gradient(top, #64a7f4, #4dafdd);
 }
 
 .progress-button:focus {
@@ -60,7 +62,7 @@
 /* The colorful bar that grows depending on the progress */
 
 .progress-button .tz-bar{
-    background-color:#d90429;
+    background-color:#dd3346;
     height:3px;
     bottom:0;
     left:0;
@@ -80,6 +82,8 @@
 .progress-button .tz-bar.background-horizontal{
     height:100%;
     border-radius:5px;
+    /*border-style: solid;*/
+    /*border-color: white;*/
 }
 
 .progress-button .tz-bar.background-vertical{
@@ -87,6 +91,8 @@
     top:0;
     width:100%;
     border-radius:5px;
+    border-color: white;
+    border-style: solid;
 }
 
 
@@ -96,10 +102,10 @@
 
 
 .progress-button.red{
-    background-color: #d90429;
-    background-image:-webkit-linear-gradient(top, #d90429, #ef233c);
-    background-image:-moz-linear-gradient(top, #d90429, #ef233c);
-    background-image:linear-gradient(top, #d90429, #ef233c);
+    background-color: #dd3346;
+    background-image:-webkit-linear-gradient(top, #dd3346, #ef233c);
+    background-image:-moz-linear-gradient(top, #dd3346, #ef233c);
+    background-image:linear-gradient(top, #dd3346, #ef233c);
 }
 
 .progress-button.red .tz-bar{

@@ -8,6 +8,29 @@ $(document).ready(function(){
     setupSongsForUser(currentUserId);
     setupLikeHandler();
     setupPlayPauseHandler();
+
+    // var chatButton = $('#chatButton'+currentUserId);
+    // chatButton.on("click",function(event) {
+    //     console.log('chat');
+    // });
+
+    var chatButton = $('.progress-button');
+    chatButton.on("click",function(event) {
+        console.log(this);
+        console.log($(this));
+        var id = $(this).attr('id');
+        console.log(id);
+        if($(this).hasClass('finished')) {
+            console.log('Can chat');
+
+            $.get('/chat', function(result){
+                console.log(result);
+            });
+        }
+        else {
+            console.log('Can NOT chat');
+        }
+    });
 });
 
 
@@ -217,9 +240,11 @@ function setupSongwaves(songJson) {
         height : 80,
         barWidth : 4,
         cursorWidth : 2,
-        waveColor: '#938d2a',
+        // waveColor : '#2a4764',
+        // waveColor : '#787fa8',
+        // waveColor: '#294764',
         cursorColor: 'white',
-        progressColor: 'red'
+        progressColor: '#dd3346'
     });
 
     wavesurfer.on('ready', function () {

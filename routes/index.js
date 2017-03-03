@@ -25,7 +25,7 @@ router.get('/onboarding', function(req, res, next) {
 });
 
 router.get('/genreselection', function(req, res, next) {
-    res.render('genrescreen');
+    res.render('selectgenres');
 });
 
 router.get('/loading', function(req, res, next) {

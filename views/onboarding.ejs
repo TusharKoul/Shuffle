@@ -1,111 +1,61 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets/genre-selection.css">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="/javascripts/onboarding.js" ></script>
-
-
-  <style>
-  
-  #bigDiv{
-       margin: 40px 0px 50px 00px;
-  }
-  select { width: 400px;
-            text-align-last:center;
-  }
-
-</style>
-  
+    <% include partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/onboarding.css" />
+    <script type="text/javascript" src="/javascripts/onboarding.js" ></script>
 </head>
 <body>
 
 <%- include("partials/apptitlebar.ejs",{goto:"/home",backbutton:1,home:1} ) %>
 
-  
+<h2>Who are you?</h2>
 
 
 
-<div class="container" id="bigDiv">
-<div class="container text-center">
-   <form>
-    <div class="form-group text-center">
-      <select class="form-control" id="sel1">
+<div class="container">
+    <select class="form-control" id="sel1">
         <option>I am</option>
         <option>We are</option>
-       </select> 
+    </select>
 
-       
-      <br> 
-    </div>
-    </form>
-  </div>
-
-<div class="container text-center">
     <h2> a </h2>
 
-    </div>
+    <select class="form-control" id="sel2">
+        <option>Orchestra</option>
+        <option>Acapella group</option>
+        <option>Choir</option>
+        <option>DJ group</option>
+        <option>Band</option>
+    </select>
 
-<div class="container text-center">
-  <form>
-    <div class="form-group text-center">
-      <select class="form-control" id="sel2">
-         <option>Orchestra</option>
-         <option>Acapella group</option> 
-         <option>Choir</option>
-         <option>DJs</option>
-         <option>Band</option>
-
-
-        </select>
-      <br>
-    </div>
-    </form>
-     <form>
-    <div class="form-group text-center">
-      <select class="form-control" id="sel3">
+    <select class="form-control" id="sel3">
         <option>Guitarist</option>
-         <option>Drummer</option>
+        <option>Drummer</option>
         <option>Bassist</option>
         <option>Vocalist</option>
         <option>DJ</option>
         <option>Pianist/Keyboard Player</option>
-        <option>Other</option>    
-        </select>
-      <br>
-    </div>
-    </form>
-</div>
+        <option>Other</option>
+    </select>
 
-<div class="container text-center">
     <h2> looking for a </h2>
 
-    </div>
-    <br>
+   <select class="form-control" id="sel4">
+       <option>Guitarist</option>
+       <option>Drummer</option>
+       <option>Bassist</option>
+       <option>Vocalist</option>
+       <option>DJ</option>
+       <option>Other</option>
+   </select>
 
-<div class="container text-center">
-   <select class="form-control" id="sel1">
-         <option>Guitarist</option>
-         <option>Drummer</option>
-        <option>Bassist</option>
-        <option>Vocalist</option>
-        <option>DJ</option>
-        <option>Other</option>    
-        </select>
-      <br>
-    </div>
-    </form>
 </div>
 
 
-<%- include("partials/nextBtn.ejs",{goto:"/genreselection"} ) %> 
-</div>
+<div class="float-button"> NEXT </div>
+
+<!--<%- include("partials/nextBtn.ejs",{goto:"/genreselection"} ) %> -->
 
 
 

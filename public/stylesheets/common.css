@@ -46,7 +46,7 @@ text-align: center;
 margin-top: 20%;
 }
 
-.glyphicon-cog{
+.glyphicon-question-sign{
   font-size:90px;
   color: white;
   margin-top: 20px;
@@ -84,4 +84,9 @@ font-size:144px;
 .float-button-disabled {
   background-color: #8D99AE;
   color: gray;
+}
+.common-background{
+font-family: 'Comfortaa', cursive;
+    background-color: #131e29;
+
 }

@@ -44,9 +44,6 @@ router.get('/matchlist', function(req, res, next) {
     res.render('matchlist', matchData );
 });
 
-router.get('/Support', function(req, res, next) {
-    res.render('settings');
-});
 
 router.get('/songs/:userId', function(req, res, next) {
     var userId = req.params.userId;
@@ -63,9 +60,9 @@ router.get('/songs/:userId', function(req, res, next) {
 });
 
 
-//router.get('/Support', function(req, res, next) {
-   // res.render('Support');
-//});
+router.get('/support', function(req, res, next) {
+   res.render('Support');
+});
 
 router.get('/chat', function(req, res, next) {
     res.render('chat');

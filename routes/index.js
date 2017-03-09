@@ -44,7 +44,7 @@ router.get('/matchlist', function(req, res, next) {
     res.render('matchlist', matchData );
 });
 
-router.get('/settings', function(req, res, next) {
+router.get('/Support', function(req, res, next) {
     res.render('settings');
 });
 
@@ -62,9 +62,9 @@ router.get('/songs/:userId', function(req, res, next) {
     res.render('partials/songlist', {layout: false, songs: usersSongs});
 });
 
-router.get('/chat', function(req, res, next) {
-    res.render('chat');
-});
+//router.get('/Support', function(req, res, next) {
+   // res.render('Support');
+//});
 
 router.get('/home', function(req, res, next) {
     res.render('home');

@@ -26,6 +26,9 @@ function handleGenreSelection() {
         }
 
         $(this).toggleClass("genre-button-selected");
+
+        console.log($(this).text);
+        ga("send", "event", "selected", "click" );
     });
 }
 
@@ -36,5 +39,6 @@ function handleNextClicked() {
         }
 
         window.location.href='/loading';
+
     })
 }

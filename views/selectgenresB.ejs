@@ -27,82 +27,108 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </script>
 
+
+
+
+
     <% include partials/head.ejs %>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/selectgenres.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/javascripts/selectgenres.js" ></script>
-     
-    <!-- Include the plugin's CSS and JS: -->
-    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
-</head>
-<style>
-.multi-select{
-    font-size: 32px;
-    color: black;
-    text-align: center;
-    
-    
-}
-#example-getting-started{
-    height: 500px;
-    width:60%;
-    text-align: center;
-}
-h5{
-    margin-top: 20px;
-    text-align: center;
-    color: white;
+    <link rel="stylesheet" type="text/css" href="/stylesheets/loading.css"/>
 
-}
-h6{
-    margin-top: 3px;
-    text-align: center;
-    color: white;
-}
-</style>
+    <script type="text/javascript" src="/javascripts/selectgenres.js" ></script>
+
+</head>
 <body>
 
 <%- include("partials/apptitlebar.ejs",{goto:"/onboarding",backbutton:1,home:1} ) %>
 
 <h2>What genres would you like to play?</h2>
 
-<h5> you can scroll down and select multiple genres</h5>
-<h6> (do not tap on the genres itself but tap the white space next to them to select multiple genres)
 
-<div class= "multi-select">
+<p> <!--DO NOT REMOVE. THIS P TAG IS NEEDED FOR A NEW LINE--> </p>
 
-    
-<select id="example-getting-started" multiple="multiple">
-    <option value="Funk">Funk</option>
-    <option value="EDM">EDM</option>
-    <option value="Rock">Rock</option>
-    <option value="Metal">Metal</option>
-    <option value="Clasic">Classic</option>
-    <option value="Pop">Pop</option>
-    <option value="Hiphop">Hiphop</option>
-    <option value="Reggae">Reggae</option>
-    <option value="Rap">Rap</option>
-    <option value="House">House</option>
-    <option value="Jazz">Jazz</option>
-    <option value="Country">Country</option>
-    <option value="Blues">Blues</option>
-    <option value="K-Pop">K-Pop</option>
-    <option value="Indie">Indie</option>
-    <option value="Acoustic">Acousitc</option>
-    <option value="Lo-Fi">Lo-Fi</option>
-    <option value="Punk">Punk rock</option>
-    <option value="Trap">Trap</option>
-    <option value="Djent">Djent</option>
-</select>
+<div id ='genre1' class="genre-button">
+    <img class="genre-img" src = '/images/funk.svg'/>
+    <div class="genre-text">Funk</div>
 </div>
 
-<div class="float-button"> NEXT </div>
+<div id ='genre2' class="genre-button">
+    <img class="genre-img" src = '/images/hiphop.svg'/>
+    <div class="genre-text">Hip-Hop</div>
+</div>
+
+<div id ='genre3' class="genre-button">
+    <img class="genre-img" src = '/images/house.svg'/>
+    <div class="genre-text">House</div>
+</div>
+
+
+<div id ='genre4' class="genre-button">
+    <img class="genre-img" src = '/images/classic.svg'/>
+    <div class="genre-text">Classic</div>
+</div>
+
+<div id ='genre5' class="genre-button">
+    <img class="genre-img" src = '/images/EDM.svg'/>
+    <div class="genre-text">EDM</div>
+</div>
+
+<!-- <div id ='genre6' class="genre-button">
+    <img class="genre-img" src = '/images/folk.svg'/>
+    <div class="genre-text">Folk</div>
+</div> -->
+
+
+<!-- <div id ='genre7' class="genre-button">
+    <img class="genre-img" src = '/images/indie.svg'/>
+    <div class="genre-text">Indie</div>
+</div> -->
+
+<div id ='genre8' class="genre-button">
+    <img class="genre-img" src = '/images/jazz.svg'/>
+    <div class="genre-text">Jazz</div>
+</div>
+
+<div id ='genre9' class="genre-button">
+    <img class="genre-img" src = '/images/reggae.svg'/>
+    <div class="genre-text">Reggae</div>
+</div>
+
+
+<div id ='genre10' class="genre-button">
+    <img class="genre-img" src = '/images/metal.svg'/>
+    <div class="genre-text">Metal</div>
+</div>
+
+<div id ='genre11' class="genre-button">
+    <img class="genre-img" src = '/images/rock.svg'/>
+    <div class="genre-text">Rock</div>
+</div>
+<div id ='genre11' class="genre-button">
+    <img class="genre-img" src = '/images/rock.svg'/>
+    <div class="genre-text">Other</div>
+</div>
+
+<div id ='genre11' class="genre-button" style="visibility: hidden;">
+    <img class="genre-img" src = '/images/rock.svg'/>
+    <div class="genre-text">Other</div>
+</div>
+<div id ='genre11' class="genre-button" style="visibility: hidden;">
+    <img class="genre-img" src = '/images/rock.svg'/>
+    <div class="genre-text">Other</div>
+</div>
+<div id ='genre11' class="genre-button" style="visibility: hidden;">
+    <img class="genre-img" src = '/images/rock.svg'/>
+    <div class="genre-text">Other</div> 
+</div>
+<!--<div id ='genre12' class="genre-button">-->
+    <!--<img class="genre-img" src = '/images/country.svg'/>-->
+    <!--<div class="genre-text">Country</div>-->
+<!--</div>-->
+
+<div class="float-button float-button-disabled"> NEXT </div>
 
 </body>
 

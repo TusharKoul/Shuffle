@@ -62,9 +62,15 @@ router.get('/songs/:userId', function(req, res, next) {
     res.render('partials/songlist', {layout: false, songs: usersSongs});
 });
 
+
 //router.get('/Support', function(req, res, next) {
    // res.render('Support');
 //});
+
+router.get('/chat', function(req, res, next) {
+    res.render('chat');
+});
+
 
 router.get('/home', function(req, res, next) {
     res.render('home');

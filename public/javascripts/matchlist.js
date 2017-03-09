@@ -16,6 +16,7 @@ $(document).ready(function(){
         var id = $(this).attr('id');
         if($(this).hasClass('finished')) {
             console.log('Can chat');
+            window.location.href='/chat?id='+currentUserId
         }
         else {
             console.log(id + ' Can NOT chat');

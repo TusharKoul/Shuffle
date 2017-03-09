@@ -5,115 +5,12 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
-<style>
-    /* Bordered form */
-/*#loginform {
-        border: 3px solid #f1f1f1;
-    }*/
-    .h1-style{
-        text-align: center;
-        margin-top: 10%;
-        font-size: 90px;
-        font-family: "";
-        margin-bottom: 12%;
-        margin-left-right: 15%;
-        margin-right-left: 15%;
-        
-    }
-    h2{
-        text-align: center;
-        margin-top:2%;
-        margin-bottom: 2%;
-        font-size: 35px;
-        font-family: "comic sans";
-    }
-   
-    /* Set a style for all buttons */
-    .btn-facebook {
-        background-color: #154EA8;
-        color: white;
-        padding: 34px 40px;
-        margin-bottom: 5%;
-        margin-left: 15%;
-        margin-top: 10%;
-        border: none;
-        cursor: pointer;
-        width: 70%;
-        font-size: 35px;
-    }
-    .btn-spotify {
-        background-color: #4ab55f;
-        color: white;
-        padding: 34px 40px;
-        margin-bottom: 5%;
-        margin-left: 15%;
-        margin-top: 5%;
-        border: none;
-        cursor: pointer;
-        width: 70%;
-        font-size: 35px;
-    }
-    .btn-soundcloud{
-        background-color: #FF5500;
-        color: white;
-        padding: 34px 40px;
-        margin-bottom: 5%;
-        margin-left: 15%;
-        margin-top: 5%;
-        border: none;
-        cursor: pointer;
-        width: 70%;
-        margin-bottom: 5%;
-        font-size: 35px;
-    }
 
-
-    .btn-email{
-        background-color: #020107;
-        color: white;
-        padding: 34px 40px;
-        margin-bottom: 5%;
-        margin-left: 15%;
-        margin-top: 5%;
-        border: none;
-        cursor: pointer;
-        width: 70%;
-        margin-bottom: 5%;
-        font-size: 35px;
-    }
-    .marginfix{
-        margin-top: 00px;
-
-    }
-    .app-title-bar {
-        background-color: #000;
-        padding-right: 20px;
-        padding-bottom: 15px;
-        padding-top: 10px;
-
-    }
-
-    .app-title{
-      text-align: center;
-      font-size: 84px;
-      margin-top: 15px;
-      font-weight: bold;
-      color: white;
-      margin-left: 20px;
-}
-#login-pic{
-float:;
-
-
-     
-}
-
-
-
-
-</style>
 </head>
 
 
@@ -130,19 +27,28 @@ float:;
 <div class = "marginfix">
 <h1 class = "h1-style bg-warning">Login</h1>
 </div>
-<center><img src  = "images/login.jpg" id = "login-pic" alt="login image"> </center>
+<center><img src  = "images/login.jpg" id = "login-pic" alt="login image" style ="width: 40%; height= 30%;"> </center>
+<!-- Facebook button -->
+<a class="btn btn-block btn-social btn-facebook" style="text-align:justified;" href= "/onboarding">
+    <span class="fa fa-facebook" style="float:left; font-size:70px; "></span> Login with Facebook
+  </a>
+<!-- SoundCloud button -->
+  <a class="btn btn-block btn-social btn-soundcloud " style="text-align:justified;" href= "/onboarding" >
+    <span class="fa fa-soundcloud" style="float:left; font-size:70px;"></span> Login with SoundCloud
+  </a>
+  <!-- Spotify button -->
+  <a class="btn btn-block btn-social btn-spotify" style="text-align:justified;" href= "/onboarding">
+    <span class="fa fa-spotify" style="float:left; font-size: 75px;" ></span> Login with Spotify
+  </a>
 
 
-<form id="loginForm" role="form" method="get" action="/onboarding">
-    <button type ="submit" class = "btn-facebook"> Login with Facebook</button>
-    <button type ="submit" class = "btn-spotify"> Login with Spotify</button>
-    <button type ="submit" class = "btn-soundcloud"> Login with Sound Cloud</button>
-</form>
 
-<!-- <h2> OR </h2> -->
+<h1> OR </h1>
 
 <form id="loginForm" role="form" method="get" action="/emailsignup">
-<button type="submit" class = "btn-email"> Login with Email </button>
+<a class="btn btn-block btn-social btn-email" style="text-align:justified;" href= "/emailsignup">
+    <span class="fa fa-envelope" style="float:left; font-size:70px;"></span> Login with Email
+  </a>
 </form>
 
 

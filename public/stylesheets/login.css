@@ -1,0 +1,130 @@
+
+    .h1-style{
+        text-align: center;
+        margin-top: 10%;
+        font-size: 90px;
+        font-family: "";
+        margin-bottom: 12%;
+        margin-left-right: 15%;
+        margin-right-left: 15%;
+        
+    }
+    h1{
+        text-align: center;
+        margin-top:2%;
+        margin-bottom: 2%;
+        font-size: 45px;
+        font-family: "comic sans";
+    }
+   
+    /* Set a style for all buttons */
+    .btn-facebook {
+        background-color: #154EA8;
+        color: white;
+        padding: 34px 40px;
+        margin-bottom: 5%;
+        margin-left: 15%;
+        margin-top: 10%;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        font-size: 45px;
+
+    }
+    .btn-spotify {
+        background-color: #4ab55f;
+        color: white;
+        padding: 34px 40px;
+        margin-bottom: 5%;
+        margin-left: 15%;
+        margin-top: 5%;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        font-size: 45px;
+    }
+    .btn-soundcloud{
+        background-color: #FF5500;
+        color: white;
+        padding: 34px 40px;
+        margin-bottom: 5%;
+        margin-left: 15%;
+        margin-top: 5%;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        margin-bottom: 5%;
+        font-size: 45px;
+    }
+
+
+    .btn-email{
+        background-color: #020107;
+        color: white;
+        padding: 34px 40px;
+        margin-bottom: 5%;
+        margin-left: 15%;
+        margin-top: 5%;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        margin-bottom: 5%;
+        font-size: 45px;
+    }
+    .marginfix{
+        margin-top: 00px;
+
+    }
+    .app-title-bar {
+        background-color: #000;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+
+    }
+
+    .app-title{
+      text-align: center;
+      font-size: 84px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: white;
+      margin-left: 20px;
+}
+
+
+
+/*email signup css*/
+.someform {
+        border: 3px solid #f1f1f1;
+    }
+
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+.Login-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+.Cancel-button {
+        background-color: #e5103a;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }

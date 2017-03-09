@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<head><link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans:300,400" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -13,7 +14,7 @@
 
     /* Bordered form */
 .someform {
-        border: 3px solid #f1f1f1;
+        border: 3px solid #131e29;
     }
 
     /* Full-width inputs */
@@ -46,6 +47,16 @@
         width: 100%;
     }
 
+    body {
+  font-family: 'Comfortaa', cursive;
+  background-color: #131e29;
+  color:white;
+}
+  .login{
+margin-top: 20%
+  }
+
+
 
 </style>
 
@@ -55,7 +66,7 @@
 <form class= "someform" id="loginForm" role="form" method="get" action="/onboarding">
     
 
-    <div class="container">
+    <div class="container login">
         <label><b>Email ID or Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -70,7 +81,7 @@
 
 </form>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container">
         <form id="loginForm" role="form" method="get" action="/login">
             <button type="submit" class="Cancel-button">Cancel</button>
         </form>

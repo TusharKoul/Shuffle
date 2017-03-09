@@ -12,6 +12,8 @@ h2 {
 .app-title-bar {
     background-color: #0b1219;
     padding-right: 20px;
+
+
 }
 
 .app-title{
@@ -93,4 +95,9 @@ font-size:144px;
 .float-button-disabled {
   background-color: #8D99AE;
   color: gray;
+}
+
+.navbutton{
+  border-color: #0b1219;
+  background-color: #0b1219;
 }

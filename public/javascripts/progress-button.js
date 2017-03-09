@@ -96,6 +96,8 @@ $(document).ready(function(){
             function setProgress(percentage){
                 bar.filter('.background-horizontal,.background-bar').width(percentage+'%');
                 bar.filter('.background-vertical').height(percentage+'%');
+                var newOpacity = 0.5 * (1 + (percentage/100));
+                button.fadeTo("slow", newOpacity );
             }
 
         });

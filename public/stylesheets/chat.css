@@ -10,13 +10,13 @@
     /*height: 500px;*/
     height: 90%;
     border-radius: 10px;
-    background-color: #fff;
+    /*backgr`ound-color: #fff;*/
     left: 50%;
     /*top: 50%;*/
     top: 54%;
     transform: translateX(-50%) translateY(-50%);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;*/
     overflow: hidden;
 }
 
@@ -57,8 +57,8 @@
     position: relative;
     list-style: none;
     padding: 20px 10px 0 10px;
-    margin: 0;
-    height: 100%;
+    /*margin-bottom: 80px;*/
+    height: 80%;
     overflow: scroll;
 }
 .messages .message {
@@ -141,7 +141,7 @@
 .bottom_wrapper {
     position: relative;
     width: 100%;
-    background-color: #fff;
+    /*background-color: #fff;*/
     padding: 10px 10px;
     position: absolute;
     bottom: 0;
@@ -162,7 +162,8 @@
     width: calc(100% - 40px);
     position: absolute;
     outline-width: 0;
-    color: gray;
+    color: white;
+    background-color: transparent;
 }
 .bottom_wrapper .send_message {
     padding-left: 5px;

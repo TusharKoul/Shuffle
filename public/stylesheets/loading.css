@@ -25,9 +25,9 @@
 }
 
 .spinner > div {
-    background-color: #294764;
+    /*background-color: #294764;*/
     /*background-color: #64a7f4;*/
-    /*background-color: #999999;*/
+    background-color: #999999;
     height: 100%;
     width: 8px;
     margin-left: 4px;

@@ -7,11 +7,13 @@
     position: absolute;
     width: calc(100% - 20px);
     max-width: 800px;
-    height: 500px;
+    /*height: 500px;*/
+    height: 90%;
     border-radius: 10px;
     background-color: #fff;
     left: 50%;
-    top: 50%;
+    /*top: 50%;*/
+    top: 54%;
     transform: translateX(-50%) translateY(-50%);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     background-color: #f8f8f8;
@@ -56,7 +58,7 @@
     list-style: none;
     padding: 20px 10px 0 10px;
     margin: 0;
-    height: 347px;
+    height: 100%;
     overflow: scroll;
 }
 .messages .message {
@@ -140,16 +142,16 @@
     position: relative;
     width: 100%;
     background-color: #fff;
-    padding: 20px 20px;
+    padding: 10px 10px;
     position: absolute;
     bottom: 0;
 }
 .bottom_wrapper .message_input_wrapper {
     display: inline-block;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px solid #bcbdc0;
-    width: calc(100% - 160px);
+    width: 80%;
     position: relative;
     padding: 0 20px;
 }
@@ -163,10 +165,11 @@
     color: gray;
 }
 .bottom_wrapper .send_message {
-    width: 140px;
+    padding-left: 5px;
+    padding-right: 5px;
     height: 50px;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: #a3d063;
     border: 2px solid #a3d063;
     color: #fff;

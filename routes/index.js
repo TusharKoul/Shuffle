@@ -63,7 +63,7 @@ router.get('/songs/:userId', function(req, res, next) {
 });
 
 router.get('/chat', function(req, res, next) {
-    res.render('support');
+    res.render('chat');
 });
 
 router.get('/home', function(req, res, next) {

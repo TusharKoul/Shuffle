@@ -11,7 +11,8 @@
 
 </head>
 <style>
-h1{
+.text{
+  margin-top: 20%;
 	font-size: 80px;
 	text-align: center;
 }
@@ -25,14 +26,14 @@ body {
 
 <%- include("partials/homeNavBar.ejs",{logoff:"1",support:1} ) %>
 
-<div id = "start">
+<div>
+  <p class = "text"> You do not have any chats. Press the + button to get started</p>
 
-<form id="start" role="form" method="get" action="/onboarding">
-	<button type = "submit"> 
-		<p class = "glyphicon glyphicon-plus-sign"></p>
-	</button>
-<h1> You do not have any chats. Press the + button to get started</h1>
-</form>
+  
+	 <a href = "/onboarding">
+	 	<span class = "glyphicon glyphicon-plus-sign" style="float:center;"></span>
+   </a>
+  
 </div> 
 </body>
 </html>

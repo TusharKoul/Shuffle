@@ -21,6 +21,10 @@ body {
         
     }
 
+    .btn {
+        margin-left: 8% !important;
+        width: 84% !important;;
+    }
    
     /* Set a style for all buttons */
     .btn-facebook {

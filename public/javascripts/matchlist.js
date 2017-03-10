@@ -9,26 +9,17 @@ $(document).ready(function(){
     setupLikeHandler();
     setupPlayPauseHandler();
 
-    // var chatButton = $('#chatButton'+currentUserId);
-    // chatButton.on("click",function(event) {
-    //     console.log('chat');
-    // });
 
     var chatButton = $('.progress-button');
     chatButton.on("click",function(event) {
-        console.log(this);
-        console.log($(this));
+        event.preventDefault();
         var id = $(this).attr('id');
-        console.log(id);
         if($(this).hasClass('finished')) {
             console.log('Can chat');
-
-            $.get('/chat', function(result){
-                console.log(result);
-            });
+            window.location.href='/chat?id='+currentUserId
         }
         else {
-            console.log('Can NOT chat');
+            console.log(id + ' Can NOT chat');
         }
     });
 });
@@ -70,8 +61,8 @@ function setupSlider(){
 }
 
 function handleSliderEvents() {
-    // On before slide change
     $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        if (nextSlide == currentSlide) { /* NO OPERATION */return }
         destroyCurrentSongwaves();
         currentUserId = nextSlide + 1;
         setupSongsForUser(currentUserId);
@@ -233,6 +224,7 @@ function togglePlayPause(songid) {
 
 function setupSongwaves(songJson) {
     var songwaveid = '#song-waveform' + songJson.songid;
+
     showLoadingSoundwave(songwaveid);
 
     var wavesurfer = WaveSurfer.create({
@@ -249,7 +241,6 @@ function setupSongwaves(songJson) {
 
     wavesurfer.on('ready', function () {
         removeLoadingSoundwave();
-        console.log('ready' + songwaveid);
         currentSongwaveDict[songJson.songid] = wavesurfer;
     });
 

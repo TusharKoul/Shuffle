@@ -38,6 +38,7 @@ body {
         cursor: pointer;
         width: 80%;
         font-size: 45px;
+        border-radius: 25px;
 
     }
     .btn-spotify {
@@ -51,6 +52,7 @@ body {
         cursor: pointer;
         width: 80%;
         font-size: 45px;
+        border-radius: 25px;
     }
     .btn-soundcloud{
         background-color: #FF5500;
@@ -64,6 +66,7 @@ body {
         width: 80%;
         margin-bottom: 5%;
         font-size: 45px;
+        border-radius: 25px;
     }
 
 
@@ -79,6 +82,7 @@ body {
         margin-bottom: 5%;
         font-size: 45px;
         color: white;
+        border-radius: 25px;
     }
     .marginfix{
         margin-top: 00px;

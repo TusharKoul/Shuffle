@@ -2,42 +2,42 @@
   {
     "userid": 1,
     "songid": 1,
-    "songname": "Bob Marley - One Love",
+    "songname": "Steven Wilson - Luminol",
     "liked": 0,
     "playing": 0
   },
   {
     "userid": 1,
     "songid": 2,
-    "songname": "Akon - Smackthat",
+    "songname": "Pearl Jam - Alive",
     "liked": 0,
     "playing": 0
   },
   {
     "userid": 1,
     "songid": 3,
-    "songname": "Akon - 50 cent",
+    "songname": "Nirvana - In Bloom",
     "liked": 0,
     "playing": 0
   },
   {
     "userid": 2,
     "songid": 4,
-    "songname": "Steven Wilson - Luminol",
+    "songname": "99 Problems",
     "liked": 0,
     "playing": 0
   },
   {
     "userid": 2,
     "songid": 5,
-    "songname": "Pearl Jam - Alive",
+    "songname": "Forever young",
     "liked": 0,
     "playing": 0
   },
   {
     "userid": 2,
     "songid": 6,
-    "songname": "Nirvana - In Bloom",
+    "songname": "Can't knock the hustle",
     "liked": 0,
     "playing": 0
   },
@@ -59,6 +59,27 @@
     "userid": 3,
     "songid": 9,
     "songname": "Coldplay - Paradise",
+    "liked": 0,
+    "playing": 0
+  },
+  {
+    "userid": 4,
+    "songid": 10,
+    "songname": "Bass Jam 1",
+    "liked": 0,
+    "playing": 0
+  },
+  {
+    "userid": 4,
+    "songid": 11,
+    "songname": "Drum Jam 2",
+    "liked": 0,
+    "playing": 0
+  },
+  {
+    "userid": 4,
+    "songid": 12,
+    "songname": "Bass Jam 2",
     "liked": 0,
     "playing": 0
   }

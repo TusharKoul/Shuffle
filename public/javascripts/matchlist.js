@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 
     var chatButton = $('.progress-button');
-    chatButton.on("click",function(event) {
+    chatButton.on("click touchstart",function(event) {
         event.preventDefault();
         var id = $(this).attr('id');
         if($(this).hasClass('finished')) {
@@ -158,13 +158,15 @@ function getLoadingHtml(withContainer,len) {
 
 
 function setupLikeHandler() {
-    $(document).on("click", ".glyphicon-heart-empty", function(event){
+    $(document).on("touchleave click", ".glyphicon-heart-empty", function(event){
+        console.log('Clicking on empty');
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
         postToggleLikeOnSong($(this).attr('id'),1);
         incrementChatProgress(currentUserId);
     });
 
-    $(document).on("click", ".glyphicon-heart", function(event){
+    $(document).on("touchleave click", ".glyphicon-heart", function(event){
+        console.log('Clicking on FULL');
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
         postToggleLikeOnSong($(this).attr('id'), 0);
         decrementChatProgress(currentUserId);
@@ -224,7 +226,7 @@ function togglePlayPause(songid) {
 
 function setupSongwaves(songJson) {
     var songwaveid = '#song-waveform' + songJson.songid;
-
+    console.log('Load song' + songJson.songid);
     showLoadingSoundwave(songwaveid);
 
     var wavesurfer = WaveSurfer.create({
@@ -251,7 +253,9 @@ function setupSongwaves(songJson) {
     });
 
     // Hard coding song for now
-    wavesurfer.load('../assets/song1.mp3');
+    var songId = songJson.songid % 3;
+    var songPath = '../assets/song' + songId + '.mp3';
+    wavesurfer.load(songPath);
 }
 
 function showLoadingSoundwave(songwaveid) {

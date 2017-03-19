@@ -161,14 +161,14 @@ function setupLikeHandler() {
     $(document).on("touchleave click", ".glyphicon-heart-empty", function(event){
         console.log('Clicking on empty');
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
-        postToggleLikeOnSong($(this).attr('id'),1);
+        //postToggleLikeOnSong($(this).attr('id'),1);
         incrementChatProgress(currentUserId);
     });
 
     $(document).on("touchleave click", ".glyphicon-heart", function(event){
         console.log('Clicking on FULL');
         $(this).toggleClass("glyphicon-heart-empty glyphicon-heart");
-        postToggleLikeOnSong($(this).attr('id'), 0);
+        //postToggleLikeOnSong($(this).attr('id'), 0);
         decrementChatProgress(currentUserId);
     });
 }
